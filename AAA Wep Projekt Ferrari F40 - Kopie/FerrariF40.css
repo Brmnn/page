@@ -1,0 +1,129 @@
+*{
+    margin: 0;
+    padding: 0;
+    
+}
+
+body {
+	background-color: black;
+}
+
+.Gesamt{
+	background-color: rgb(146, 10, 10);
+	border: solid 5px;
+    margin-left: 10%;
+	margin-right: 10%;
+	margin-top: 5%;
+	margin-bottom: 5%;
+    padding: 2% 2%;
+	width: 80%;
+	height: 80%;
+	position: absolute;
+}
+
+.logo{
+    background-color: ghostwhite;
+    border-style: solid;
+    border-width: 5px;
+    margin-left: 35%;
+    margin-right: 35%;
+    overflow: auto;
+    
+}
+
+.text1{
+    background-color: ghostwhite;
+    border-style: solid;
+    border-width: 5px;
+    float: left;
+    font-size: 20px;
+    overflow: auto;
+    height: 30%;
+    width: 30%;
+    text-align: center;
+    margin-top: 2%;
+    margin-left: 10%;
+}
+
+.bild1{
+    background-image: url(/Bilder/F40Front.jpg);
+    background-color: ghostwhite;
+    float: right;
+    border-style: solid;
+    border-width: 5px;
+    overflow: hidden;
+    background-repeat: no-repeat;
+    height: 30%;
+    width: 30%;
+    margin-top: 2%;
+    margin-right: 10%;
+}
+
+.bild1:hover {
+    background-image: url(/Bilder/F40Heck.jpg);
+}
+
+.bild2{
+    background-image: url(/Bilder/F40LMFront.jpg);
+    background-color: ghostwhite;
+    float: left;
+    border-style: solid;
+    border-width: 5px;
+    clear: left;
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-position-y: center center;
+    height: 30%;
+    width: 30%;
+    margin-top: 5%;
+    margin-left: 10%;
+}
+
+.bild2:hover {
+    background-image: url(/Bilder/F40LMHeck.jpg);
+}
+
+.text2{
+    background-color: ghostwhite;
+    border-style: solid;
+    border-width: 5px;
+    float: right;
+    font-size: 20px;
+    overflow: auto;
+    height: 30%;
+    width: 30%;
+    clear: right;
+    text-align: center;
+    margin-top: 5%;
+    margin-right: 10%;
+}
+
+
+@media print {
+    .Gesamt{
+        padding: 1%;
+        border-style: none;
+        margin: 0%;
+    }
+
+    .logo {
+        display: none;
+    }
+
+    .text1{
+        font-size: 16px;
+        margin-top: 5%;
+    }
+    .text2{
+        font-size: 16px;
+        margin-top: 5%;
+    }   
+
+    .bild1 {
+        display: none;
+    }
+    
+    .bild2 {
+        display: none;
+    }
+}
