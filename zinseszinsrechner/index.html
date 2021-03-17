@@ -1,0 +1,50 @@
+<html>
+	<head>
+		<title>Zinseszinsrechner</title>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+		<script>
+			"use strict";
+           
+			function clicked() {
+
+				var vStartkapital =     parseFloat     (document.getElementById("idStartkapital").value);
+                var vZinssatz =      parseFloat     (document.getElementById("idZinssatz").value);
+                var vLaufzeit =      parseFloat     (document.getElementById("idLaufzeit").value);
+                
+                var vJahr = 0; 
+                
+                var vZinsen = "";
+
+                var vEndkapital= "";
+
+                var vAusgabe = "";
+
+                
+
+            vAusgabe = vAusgabe + "<table border = 1> <br>";
+            vAusgabe = vAusgabe + "<tr><th>Jahr</th><th>Kapital am 1.1.</th><th>Zinsen am 31.12.</th><th>Kapital am 31.12.</th></tr>";
+
+            while (vJahr <= vLaufzeit) {
+                vZinsen = vStartkapital * vZinssatz / 100;
+                vEndkapital = vStartkapital + vZinsen;
+                vStartkapital = vEndkapital;
+                vAusgabe = vAusgabe + "<tr><td>" + vJahr + "</td><td>" + vStartkapital + "</td><td>" + vZinsen + "</td><td>" + vEndkapital + "</td></tr>";
+                vJahr = vJahr + 1;
+            }
+            vAusgabe = vAusgabe + "</table>"+"<br>";
+            vAusgabe = vAusgabe + "Endkapital:" + vEndkapital;
+            document.getElementById("idAusgabe").innerHTML = vAusgabe;
+        }
+
+		</script>
+	</head>
+
+	<body>
+		<h1>Berechne die Gesamtkosten</h1>
+		Startkapital in €: <input id="idStartkapital" type="text" value=""><br /><br />
+        Zinssatz in %: <input id="idZinssatz" type="text" value=""><br /><br />
+        Laufzeit in Jahren: <input id="idLaufzeit" type="text" value=""><br /><br />
+		<button onClick="clicked()">Berechne das Endkapital</button><br /><br />
+		<div id="idAusgabe">Hier kommt beim Klicken auf den Button eine Ausgabe.</div>
+	</body>
+</html>
